@@ -6,9 +6,20 @@ $signout: #de5454;
 $button: #00CC8E;
 
 html{
+  overflow: visible;
   &::-webkit-scrollbar{
     display: none;
   }
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 720px;
+  box-shadow: black 0px 0px 2px 0px;
+  position: relative;
+  overflow: hidden;
 }
 
 .signin-container{
@@ -20,17 +31,15 @@ html{
   justify-content: center;
   padding: 20px 20px;
   width: 400px;
-  height: 500px;
+  height: 720px;
   position: relative;
-  left: 390px;
-  top: 130px;
   h1{
     color: $sent;
     font-family: Deco;
     filter: drop-shadow(0px 1px 1px black);
   }
   img{
-    width: 300px;
+    width: 200px;
   }
   span{
     font-weight: 700;
@@ -56,18 +65,6 @@ html{
 }
 
 
-.card{
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: 720px;
-  box-shadow: black 0px 0px 2px 0px;
-  position: relative;
-  top: 20px;
-  left: 390px;
-  overflow: hidden;
-}
-
 .signout-container{
   display: flex;
   flex-direction: row;
@@ -75,22 +72,26 @@ html{
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
-  gap: 270px;
   height: 60px;
+  gap: 210px;
   h1{
     color: white;
     font-family: Deco;
-    font-size: 36px;
+    font-size: 24px;
+    position: relative;
+    top: 7px;
   }
   button{
     background: $signout;
     outline: none;
     border: none;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 3px 6px;
     color: white;
     padding-top: 2px;
     font-family: Deco;
+    position: relative;
+    top: 3px;
     &:hover{
       background: white;
       box-shadow: white 0px 0px 5px 0px;
@@ -135,17 +136,16 @@ html{
     flex-direction: row-reverse;
     img{
       border-radius: 50px;
-      width: 50px;
+      width: 30px;
     }
     p{
       text-align: end;
       float: right;
       position: relative;
-      top: 10px;
       background: $sent;
       border-radius: 50px 0px 30px 50px;
-      padding: 5px 10px;
-      width: 320px;
+      padding: 3px 6px;
+      width: 200px;
       padding-left: 10px;
       font-family: Ancherr;
     }
@@ -153,15 +153,15 @@ html{
   .received{
     img{
       border-radius: 50px;
-      width: 50px;
+      width: 30px;
     }
     p{
       position: relative;
       top: 10px;
       background: $rcvd;
       border-radius: 0px 50px 50px 30px;
-      padding: 5px 10px;
-      width: 320px;
+      padding: 3px 6px;
+      width: 200px;
       padding-left: 10px;
       font-family: Ancherr;
     }
@@ -176,17 +176,17 @@ html{
   align-items: center;
   justify-content: center;
   input {
-    width: 350px;
-    height: 42px;
+    width: 300px;
+    height: 32px;
     outline: none;
     border: 0.25px solid gray;
     border-radius: 50px;
-    margin-right: 20px;
+    margin-right: 5px;
     padding-left: 20px;
-    padding-bottom: 5px;
     font-family: Ancherr;
     &::placeholder{
-      font-family: Ancherr;
+      font-family: Ancherr1;
+      position: relative;
     }
   }
   button {
@@ -194,11 +194,14 @@ html{
     outline: none;
     border: none;
     padding: 5px 5px;
-    width: 100px;
+    width: 80px;
     border-radius: 10px 90% 90% 10px;
     color: white;
     padding-right: 25px;
     font-family: Deco;
+    font-size: 12px;
+    position: relative;
+    bottom: 2.5px;
 
     &:hover {
       background: white;

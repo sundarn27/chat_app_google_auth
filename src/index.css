@@ -23,8 +23,13 @@ code {
 }
 
 @font-face {
+  font-family: 'Ancherr1';
+  src: local('Rajdhani'), url(./fonts/Courgette.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'Ancherr';
-  src: local('Rajdhani'), url(./fonts/Balthazar\ Regular.ttf) format('truetype');
+  src: local('Rajdhani'), url(./fonts/OldStandard-Regular.ttf) format('truetype');
 }
 
 @font-face {
