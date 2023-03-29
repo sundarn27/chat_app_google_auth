@@ -4,7 +4,7 @@ import { auth } from '../firebase'
 const SignOut = () => {
   return (
     <div className='signout-container'>
-        <h1>ARS CHAT 💬</h1>
+        <h1>ARS 💬</h1>
         <button onClick={() => auth.signOut()}>Sign Out</button>
     </div>
   )

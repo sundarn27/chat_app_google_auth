@@ -1,13 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useRef} from 'react'
 import { useState } from 'react'
 import { auth, db } from '../firebase'
 import SignOut from './SignOut'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, onSnapshot } from 'firebase/firestore'
 import SendMessage from './SendMessage'
+import { useReducer } from 'react'
 
-const Messages = () => {
+const Messages = (message) => {
 
     const [messages, setMessages] = useState([])
+
+    const ref = useRef()
+
+    useEffect(() => {
+        ref.current.scrollIntoView({behavior:"smooth"})
+    }, [message])
 
     useEffect(() => {
         (async () => {
@@ -24,7 +31,7 @@ const Messages = () => {
     console.log(messages)
 
     return (
-        <div className="chat-container">
+        <div className="chat-container" ref={ref}>
             {messages.sort( (a,b) => a.createdAt > b.createdAt ? 1 : -1 ).map((msg) => {
                 return (
                     <div key={msg.id} className={`msg ${msg.uid === auth.currentUser.uid ? 'sent' : 'received'}`}>

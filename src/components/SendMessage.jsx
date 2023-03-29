@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useReducer, useRef } from 'react'
 import { useState } from 'react'
 import { auth, db } from '../firebase'
 import firebase from 'firebase/compat/app'
@@ -6,12 +6,12 @@ import Messages from './Messages'
 
 const SendMessage = () => {
 
-    const [ msg,setMsg ] = useState("")
+    const [ msg,setMsg ] = useState("") 
 
     const sendMessage = async (e) => {
         e.preventDefault();
         const {uid, photoURL} = auth.currentUser
-
+        
         await db.collection('messages').add({
             text: msg,
             uid,
@@ -19,7 +19,9 @@ const SendMessage = () => {
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         })
         setMsg("")
+        window.location.reload()
     }
+
 
   return (
     <div className='form-container'>

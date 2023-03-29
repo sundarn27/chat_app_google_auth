@@ -10,9 +10,7 @@ const Chat = () => {
 
     return (
         <>
-            <div className=" <SignOut />
-            <Messages />
-            <SendMessage />">
+            <div className="card">
                 <SignOut />
                 <Messages />
                 <SendMessage />
