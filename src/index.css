@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Trajan-pro';
+  src: local('Rajdhani'), url(./fonts/Trajan\ Pro.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Deco';
+  src: local('Rajdhani'), url(./fonts/Market_Deco.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Ancherr';
+  src: local('Rajdhani'), url(./fonts/Balthazar\ Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenger';
+  src: local('Rajdhani'), url(./fonts/AVENGEANCE\ HEROIC\ AVENGER.otf) format('truetype');
+}
